@@ -55,9 +55,17 @@ Again in Options, change the Plonk List URL to the address of your choice. Right
 
 https://gist.githubusercontent.com/kentbrew/0fc8cb6c961ab9cdb7a3/raw/
 
-#### Okay, so I should be able to copy and paste from my settings list into a new gist and share the URL?
+#### Okay, so I should be able to copy and paste from my settings list into a new gist and share the `raw/` URL?
 
-That would be one way to do it, yes. Be careful to stop copying right after `raw/`, so you get the current version.
+That would be one way to do it, yes. When pulling , be careful to stop copying the URL right after `raw/`, so you get the master version.  This works:
+
+`https://gist.githubusercontent.com/kentbrew/0fc8cb6c961ab9cdb7a3/raw/`
+
+... but this: 
+
+`https://gist.githubusercontent.com/kentbrew/0fc8cb6c961ab9cdb7a3/raw/eb078b34bfb84db827391b791a26becebf16a4d8/plonkify.txt`
+
+... will show only that particular version of that particular file.
 
 #### If I make my own list, do I need to worry about account names?
 
