@@ -1,14 +1,16 @@
+![The Salmon of Correction](http://upload.wikimedia.org/wikipedia/commons/2/26/Plonk.png)
+
 Plonkify
 ========
 
-A Chrome extension that hides tweets from a list of accounts on Twitter.
+A Chrome extension that <a href="http://en.wikipedia.org/wiki/Plonk_%28Usenet%29">plonks</a> Twitter accounts.
 
 #### How do I install Plonkify?
 
-- Use the Download ZIP button on this page to get the archive containing manifest.json and blockr.js.
-- Unzip this archive. You should have one folder, probably named `blockr-master`.
 - Open up Chrome's extension page by typing `chrome://extensions` into your URL bar.
 - Be sure the checkbox next to "Developer mode" is checked! (thanks, @soypunk!)
+- Use the Download ZIP button on this page to get the archive.
+- Unzip this archive. You should have one folder, probably named `plonkify-master`.
 - Drag the folder into the extensions page until you see the Drop to Install note.
 - Drop it.
 
@@ -20,9 +22,9 @@ https://twitter.com/search?q=%23gamergate
 
 The default list is very short, and is based on @freebsdgirl's initial Twitter block list.
 
-#### How do I use it?
+#### How do I add more accounts to my plonk list?
 
-- Find a tweet from an account on Twitter you want to block.
+- Find a tweet from an account on Twitter you want to plonk.
 - Right-click the profile image and choose Plonkify from the context menu.
 - When the JavaScript confirm box appears, click OK.
 - Observe that the entire tweet and all other tweets from that account have been blocked out by a solid salmon-colored box.
