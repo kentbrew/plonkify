@@ -62,3 +62,17 @@ That would be one way to do it, yes. Be careful to stop copying right after `raw
 #### If I make my own list, do I need to worry about account names?
 
 Nope. Plonkify reads your list file one line at a time and uses the string before the first space as the account number. Again, if there's interest, I will do more work on this.  Or you could fork it and do it yourself!
+
+#### Why should I run this instead of just blocking on Twitter?
+
+If you have a public account on Twitter, a theoretically infinite number of miscreants can jump right into your timeline with hobnailed boots and you can never, ever make them go away without taking your account private.
+
+Twitter offers no real way to manage blocked accounts. I've tried TwitBlock and a few others, and they are slow, broken, or both. And once you get up over 1500, there seems to be no available way to even list them out via the Twitter API.
+
+I suspect that this is not an attractive problem for Twitter to solve. There aren't enough users who might want to power-block a bunch of accounts, those API queries are expensive, and there's just got too much else going on in the make-some-money department.
+
+Keep an eye on this repo:
+
+https://github.com/freebsdgirl/ggautoblocker
+
+... for updates on the state of the art. Some really smart people are working on this problem and (more importantly) bringing it to the attention of Twitter's proprietors.
