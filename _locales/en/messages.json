@@ -1,0 +1,30 @@
+{
+  "extName": {
+    "message": "Plonkify",
+     "description": "The extension's title, seen in gallery and extensions page"
+  },
+  "extDescription": {
+    "message": "Hiding unwanted tweets at the front end.",
+    "description": "The extension's description, seen in gallery and extensions page"
+  },
+  "extAction": {
+    "message": "Plonkify",
+    "description": "Action label"
+  },
+  "listUrlLabel": {
+    "message": "Plonk List URL",
+    "description": "URL of the plonk list you want to load"
+  },
+  "listAreaLabel": {
+    "message": "Plonk List (read-only so far, sorry!)",
+    "description": "Plonk list you're currently running"
+  },
+  "listUrlDefault": {
+    "message": "https://gist.githubusercontent.com/kentbrew/0fc8cb6c961ab9cdb7a3/raw/",
+    "description": "URL of the plonk list you want to load"
+  },
+  "optionTitle": {
+    "message": "Plonkify!",
+    "description": "Title for options screen"
+  }
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Pin It Button Options</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      body {
+        color: #211922;
+        background: #eee;
+        text-align: center;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 12px;
+      }
+      div#main {
+        text-align: left;
+        background: #fff;
+        width: 750px;
+        margin: 20px auto;
+        box-shadow: 0 2px 7px #777;
+      }
+      input {
+        vertical-align: middle;
+        width: 500px;
+        margin-right: 10px;
+        font-size: 12px;
+
+      }
+      input, label {
+        cursor: pointer;
+      }
+      textarea {
+        vertical-align: top;
+        height: 12em;
+      }
+      label {
+        width: 80px;
+        display: inline-block;
+        margin-right: 20px;
+        text-align: right;
+      }
+      h1 {
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee;
+        font-size: 20px;
+        margin-bottom: 0;
+      }
+
+      p {
+        line-height: 20px;
+        margin-top: 0;
+        padding: 15px 20px;
+      }
+      span#display {
+        color: #f00;
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <h1 id="optionTitle"></h1>
+      <p><label id="listUrlLabel" for="listUrl"></label><input id="listUrl" /><button>Save</button></p>
+      <p><label id="listAreaLabel" for="listArea"></label><textarea disabled id="listArea"></textarea></p>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>
