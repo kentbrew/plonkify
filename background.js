@@ -1,29 +1,3 @@
-chrome.storage.local.set({'plonk': {}});
-
-// got a list
-var gotList = function (text) {
-  var list = text.split('\n');
-  var plonk = {};
-  for (var i = 0; i < list.length; i = i + 1) {
-    if (list[i]) {
-      plonk[list[i].split(' ')[0]] = true;
-    }
-  }
-  chrome.storage.local.set({'plonk': plonk});
-};
-
-// get a list from an URL
-var getList = function (url) {
-  var list = new XMLHttpRequest();
-  list.open('GET', url, true);
-  list.onreadystatechange = function() {
-    if (list.readyState == 4 && list.status == 200) {
-      gotList(list.responseText);
-    }
-  };
-  list.send();
-};
-
 // send a string to whoever is listening on the current tab
 var sendToContent = function (str) {
   var send = str;
@@ -49,13 +23,50 @@ chrome.contextMenus.create({
   }
 });
 
+// got a list
+var gotList = function (text) {
+  var list = text.split('\n');
+  var plonk = {};
+  for (var i = 0; i < list.length; i = i + 1) {
+    if (list[i]) {
+      plonk[list[i].split(' ')[0]] = true;
+    }
+  }
+  console.log('setting local list');
+  console.log(plonk);
+  chrome.storage.local.set({'plonk': plonk});
+};
+
+// get a list from an URL
+var getList = function (url) {
+  var list = new XMLHttpRequest();
+  list.open('GET', url, true);
+  list.onreadystatechange = function() {
+    if (list.readyState == 4 && list.status == 200) {
+      console.log('got list');
+      gotList(list.responseText);
+    }
+  };
+  list.send();
+};
+
 // get the list URL from localstorage or messages
 var getListUrl = function () {
   chrome.storage.local.get('listUrl', function(obj) {
     var url = obj.listUrl || chrome.i18n.getMessage('listUrlDefault');
+    console.log('getting list from ' + url);
     getList(url);
   });
 };
 
-// get this party started
-getListUrl();
+// init local storage if we don't have anything
+chrome.storage.local.get('plonk', function(obj) {
+  if (!obj.plonk) {
+    console.log('got nothing, initing list');
+    chrome.storage.local.set({'plonk': {}});
+    getListUrl();
+  } else {
+    console.log('got plonk list');
+    console.log(obj.plonk);
+  }
+});
